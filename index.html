@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="/css/index.css">
+
+  <script src="js/Vehiculo.js"></script>
+  <script src="js/Auto.js"></script>
+  <script src="js/Camioneta.js"></script>
+  <script src="js/main.js"></script>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="screenLock" class="invisible">
+    <form>
+      <div id="formHeader">
+        <h2>Alta Vehiculo</h2>
+        <button id="btnCerrarX">X</button>
+      </div>
+      <div class="sep"></div>
+      <div class="sep"></div>
+      <div>
+        <label for="txtId">Id</label>
+        <input type="text" name="" id="txtId" disabled>
+      </div>
+      <div>
+        <label for="txtMarca">Marca</label>
+        <input type="text" name="" id="txtMarca">
+      </div>
+      <div>
+        <label for="txtModelo">Modelo</label>
+        <input type="text" name="" id="txtModelo">
+      </div>
+      <div>
+        <label for="txtPrecio">Precio</label>
+        <input type="text" name="" id="txtPrecio">
+      </div>
+      <div>
+        <label for="slForm">Tipo</label>
+        <select name="" id="slForm">
+          <option value="Camioneta" selected>Camioneta</option>
+          <option value="Auto">Auto</option>
+        </select>
+      </div>
+      <div class="sep"></div>
+      <div id="divButtons">
+        <button id="btnCerrar"  class="midButton red">Cerrar</button>
+        <button id="btnAgregar"  class="midButton blue">Agregar</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="container">
+    <button id='btnShow' class="midButton blue">Alta</button>
+    <div id='divFiltros'>
+      <div class="sep"></div>
+      <h2>Filtros</h2>
+      <div class="sep"></div>
+      <label for="">Filtrar por:</label>
+      <select name="" id="slVehiculo">
+        <option value="Todo" selected>Todo</option>
+        <option value="Auto">Auto</option>
+        <option value="Camioneta">Camioneta</option>
+      </select>
+      <label for="">Promedio de precio:</label>
+      <label id='lblPromedio'></label>
+      <button id="promedio">Calcular Promedio</button>
+    </div>
+  
+    <div id="divTabla">
+      <h3>Campos mostrados</h3>
+      <h4>Tildar los campos a mostrar</h4>
+      <div class="sep"></div>
+      <input type="checkbox" name="" id="cbId" checked>
+      <label for="">Id</label>
+      <input type="checkbox" name="" id="cbMarca" checked>
+      <label for="">Marca</label>
+      <input type="checkbox" name="" id="cbModelo" checked>
+      <label for="">Modelo</label>
+      <input type="checkbox" name="" id="cbPrecio" checked>
+      <label for="">Precio</label>
+      <div class="sep"></div>
+  
+      <h2>Lista de Vehiculos</h2>
+      <div class="sep"></div>
+      <table>
+        <tHead>
+          <tr>
+            <th>Id</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Precio</th>
+            <th>Accion</th>
+          </tr>
+        </tHead>
+        <tbody id='tbody'></tbody>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>
